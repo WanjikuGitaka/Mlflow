@@ -1,0 +1,13 @@
+name: mlflowProject
+
+conda_env: D:\mlflowProject\conda.yaml
+# Can have a docker_env instead of a conda_env, e.g.
+# docker_env:
+#    image:  mlflow-docker-example
+
+entry_points: main.py
+  main:
+    parameters:
+      alpha: float
+      l1_ratio: {type: float, default: 0.1}
+    command: "python main.py {alpha} {l1_ratio}"
